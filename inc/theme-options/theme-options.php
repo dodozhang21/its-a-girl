@@ -46,7 +46,7 @@ function itsAGirl_theme_options_init() {
 
 	add_settings_field(
 		'support', // Unique identifier for the field for this section
-		__( 'Support itsAGirl', 'vintage-camera' ), // Setting field label
+		__( 'Support itsAGirl', 'itsAGirl' ), // Setting field label
 		'itsAGirl_settings_field_support', // Function that renders the settings field
 		'theme_options', // Menu slug, used to uniquely identify the page; see _s_theme_options_add_page()
 		'general' // Settings section. Same as the first argument in the add_settings_section() above
@@ -145,7 +145,7 @@ function itsAGirl_settings_field_custom_css() {
 	$options = itsAGirl_get_theme_options();
 	?>
 	<textarea class="large-text" type="text" name="itsAGirl_theme_options[custom_css]" id="custom_css" cols="50" rows="10" /><?php echo esc_textarea( $options['custom_css'] ); ?></textarea>
-	<label class="description" for="custom_css"><?php _e( 'Add any custom CSS rules here so they will persist through theme updates.', 'vintage-camera' ); ?></label>
+	<label class="description" for="custom_css"><?php _e( 'Add any custom CSS rules here so they will persist through theme updates.', 'itsAGirll' ); ?></label>
 	<?php
 }
 
@@ -158,21 +158,21 @@ function itsAGirl_settings_field_support() {
 	if ( $options['support'] !== 'on' || !isset( $options['support'] ) ) {
 
 	?>
-	<label for"vintage-camera-support">
+	<label>
 		<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PUKAB93RNE83S" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="PayPal - The safer, easier way to pay online!" class="alignright"></a>
 
-		<?php _e( 'If you enjoy my themes, please consider making a secure donation using the PayPal button to your right. Anything is appreciated!', 'vintage-camera' ); ?>
+		<?php _e( 'If you enjoy my themes, please consider making a secure donation using the PayPal button to your right. Anything is appreciated!', 'itsAGirll' ); ?>
 
 		<br /><input type="checkbox" name="itsAGirl_theme_options[support]" id="support" <?php checked( 'on', $options['support'] ); ?> />
 		<label class="description" for="support">
-			<?php _e( 'No, thank you! Dismiss this message.', 'vintage-camera' ); ?>
+			<?php _e( 'No, thank you! Dismiss this message.', 'itsAGirll' ); ?>
 		</label>
 	</label>
 	<?php
 	}
 	else { ?>
 		<label class="description" for="support">
-			<?php _e( 'Hide Donate Button', 'vintage-camera' ); ?>
+			<?php _e( 'Hide Donate Button', 'itsAGirll' ); ?>
 		</label>
 		<input type="checkbox" name="itsAGirl_theme_options[support]" id="support" <?php checked( 'on', $options['support'] ); ?> />
 

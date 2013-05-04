@@ -13,8 +13,12 @@ visit http://pure-essence.net/2013/04/09/its-a-girl-wordpress-theme/
 --------------------------------------------------------------------------------
 Notes:
 --------------------------------------------------------------------------------
-Long menu is not supported by the top menu. Please do not put too many items in your top menu or you will run into layout issue with the top menu.
+Long menu is not supported by the top menu. If the menu items cannot fit into a single line, you will run into layout issue with the top menu.
+Long wordpress site title not supported. The layout will only look good with one line of text.
+Long wordpress site description not supported. The layout will only look good with one line of text.
 
+Primary sidebar is shown on all layouts.
+Secondary sidebar (the middle bar) is only shown on the index layout.
 
 --------------------------------------------------------------------------------
  Licenses:

@@ -12,7 +12,7 @@
  * @since itsAGirl 1.0.0
  */
 if ( ! isset( $content_width ) )
-	$content_width = 1040; /* pixels */
+	$content_width = 526; /* pixels */
 
 if ( ! function_exists( 'itsAGirl_setup' ) ):
 /**

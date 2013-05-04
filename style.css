@@ -4,7 +4,7 @@ Theme URI: http://pure-essence.net/2013/04/09/its-a-girl-wordpress-theme/
 Author: Ying Zhang
 Author URI: http://regretless.com
 Description: Created by <a href="http://pure-essence.net/">pure-essence.net</a>. It's a Girl is a responsive theme designed for baby girl blogs. It features a front page center widget area under high resolution that's ideal for a gallery widget. It supports Jetpack infinite scroll.
-Version: 1.0.3
+Version: 1.0.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, blue, brown, gray, green, red, tan, white, yellow, light, three-columns, right-sidebar, fixed-width, blavatar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, sticky-post, theme-options, threaded-comments
@@ -305,6 +305,7 @@ textarea {
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
 	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+	max-width: 100%;
 }
 button,
 input {
@@ -894,7 +895,7 @@ object {
 /* =Widgets
 ----------------------------------------------- */
 
-.widget {
+.widget img {
 }
 
 /* Search widget */
@@ -933,7 +934,7 @@ object {
 /* Main */
 
 body {
-	background: #fff url(images/bk.png) repeat;
+	background-color: #fff;
 	color: #603913;
     font-family: Adamina, Garamond,Georgia,serif;
 }
@@ -955,7 +956,7 @@ body {
 	height: 142px;
 	margin-top: 20px;
 }
-#masthead hgroup {
+#masthead section {
 	background: #603913;
 	position: absolute;
 	top: 31px;
@@ -1137,6 +1138,12 @@ h1.page-title {
 	border-width: 6px;
 	border-image: url(images/secondaryBorder.png) 5 repeat;
 }
+#secondary img.wp-smiley {
+	border: 0;
+}
+#secondary select {
+	max-width: 100%;
+}
 #secondary aside ul {
 	list-style: none;
 	padding: .5em 0;
@@ -1215,11 +1222,18 @@ a.rsswidget img {
 }
 
 #tertiary aside img {
-	max-width: 138px;
+	max-width: 92%;
+	height: auto;
 	border-color:#E13354;
 	border-style:solid;
 	border-width:6px;
 	border-image:url(images/middleBorder.png) 15 repeat;
+}
+#tertiary aside img.wp-smiley {
+	border: 0;
+}
+#tertiary aside select {
+	max-width: 100%;
 }
 
 .page-template-page-threecolumn-php #primary,
@@ -1575,7 +1589,7 @@ table#wp-calendar th {
 	#secondary {
 		margin-left: 77%;
 	}
-	#masthead hgroup {
+	#masthead section {
 		width: 80%;
 	}
 	#masthead .site-title,
@@ -1601,7 +1615,7 @@ table#wp-calendar th {
 	#secondary {
 		margin-left: 72%;
 	}
-	#masthead hgroup {
+	#masthead section {
 		width: 70%;
 	}
 	#masthead .header-image {
@@ -1694,7 +1708,7 @@ table#wp-calendar th {
 		font-size: 80%;
 	}
 	#nav-menu-wrapper,
-	#masthead hgroup,
+	#masthead section,
 	#masthead .site-title,
 	#masthead .site-description {
 		position: static;
@@ -1710,7 +1724,7 @@ table#wp-calendar th {
 	#masthead .site-description {
 		font-size: 1.9em;
 	}
-	#masthead hgroup {
+	#masthead section {
 		padding: 0 1em;
 	}
 	#nav-menu-wrapper {
