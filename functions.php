@@ -111,6 +111,11 @@ function itsAGirl_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'itsAGirl' ),
 	) );
+
+	/**
+	 * Language
+	 */
+	load_theme_textdomain('itsAGirl', get_template_directory() . '/languages');
 }
 endif; // itsAGirl_setup
 add_action( 'after_setup_theme', 'itsAGirl_setup' );

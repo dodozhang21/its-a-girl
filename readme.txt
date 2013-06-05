@@ -3,6 +3,7 @@ Thank you for choosing It's a Girl Theme.
 Version History:
 
 version 1.0.0 - Hello World
+version 1.0.7 - Makes the theme translation ready
 
 --------------------------------------------------------------------------------
 For support:
