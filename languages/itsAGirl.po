@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: itsAGirl\n"
-"POT-Creation-Date: 2013-06-04 19:24-0600\n"
-"PO-Revision-Date: 2013-06-04 19:24-0600\n"
+"POT-Creation-Date: 2013-06-13 08:05-0600\n"
+"PO-Revision-Date: 2013-06-13 08:05-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -204,6 +204,7 @@ msgid "Primary Sidebar"
 msgstr ""
 
 #: functions.php:151
+#: inc/theme-options/theme-options.php:47
 msgid "Secondary Sidebar"
 msgstr ""
 
@@ -340,35 +341,43 @@ msgstr ""
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/theme-options/theme-options.php:49
+#: inc/theme-options/theme-options.php:51
 msgid "Support itsAGirl"
 msgstr ""
 
-#: inc/theme-options/theme-options.php:81
-#: inc/theme-options/theme-options.php:82
+#: inc/theme-options/theme-options.php:83
+#: inc/theme-options/theme-options.php:84
 msgid "Theme Options"
 msgstr ""
 
-#: inc/theme-options/theme-options.php:148
+#: inc/theme-options/theme-options.php:151
 msgid ""
 "Add any custom CSS rules here so they will persist through theme updates."
 msgstr ""
 
+#: inc/theme-options/theme-options.php:162
+msgid "Shown"
+msgstr ""
+
 #: inc/theme-options/theme-options.php:164
+msgid "Hidden"
+msgstr ""
+
+#: inc/theme-options/theme-options.php:180
 msgid ""
 "If you enjoy my themes, please consider making a secure donation using the "
 "PayPal button to your right. Anything is appreciated!"
 msgstr ""
 
-#: inc/theme-options/theme-options.php:168
+#: inc/theme-options/theme-options.php:184
 msgid "No, thank you! Dismiss this message."
 msgstr ""
 
-#: inc/theme-options/theme-options.php:175
+#: inc/theme-options/theme-options.php:191
 msgid "Hide Donate Button"
 msgstr ""
 
-#: inc/theme-options/theme-options.php:195
+#: inc/theme-options/theme-options.php:211
 #, php-format
 msgid "%s Theme Options"
 msgstr ""
