@@ -48,7 +48,7 @@ function itsAGirl_theme_options_init() {
 
 	add_settings_field(
 		'support', // Unique identifier for the field for this section
-		__( 'Support itsAGirl', 'itsAGirl' ), // Setting field label
+		__( 'Support It\'s A Girl', 'itsAGirl' ), // Setting field label
 		'itsAGirl_settings_field_support', // Function that renders the settings field
 		'theme_options', // Menu slug, used to uniquely identify the page; see _s_theme_options_add_page()
 		'general' // Settings section. Same as the first argument in the add_settings_section() above
@@ -157,10 +157,11 @@ function itsAGirl_settings_field_custom_css() {
  */
 function itsAGirl_settings_field_tertiary_sidebar() {
 	$options = itsAGirl_get_theme_options();
+	$tertiary_sidebar = (isset($options['tertiary_sidebar']) && !empty($options['tertiary_sidebar'])) ? $options['tertiary_sidebar'] : "on";
 	?>
-	<input type="radio" name="itsAGirl_theme_options[tertiary_sidebar]" value="on" id="tertiary_sidebar_on" <?php checked( 'on', $options['tertiary_sidebar'] ); ?> />
+	<input type="radio" name="itsAGirl_theme_options[tertiary_sidebar]" value="on" id="tertiary_sidebar_on" <?php checked( "on", $tertiary_sidebar, true); ?> />
 	<label class="description" for="tertiary_sidebar_on"><?php _e( 'Shown', 'itsAGirll' ); ?></label> 
-	<input type="radio" name="itsAGirl_theme_options[tertiary_sidebar]" value="off" id="tertiary_sidebar_off" <?php checked( 'off', $options['tertiary_sidebar'] ); ?> />
+	<input type="radio" name="itsAGirl_theme_options[tertiary_sidebar]" value="off" id="tertiary_sidebar_off" <?php checked( "off", $tertiary_sidebar, true ); ?> />
 	<label class="description" for="tertiary_sidebar_off"><?php _e( 'Hidden', 'itsAGirll' ); ?></label>
 	<?php
 }
