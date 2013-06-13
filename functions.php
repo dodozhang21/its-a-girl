@@ -221,6 +221,37 @@ function itsAGirl_custom_css() {
 add_action('wp_head', 'itsAGirl_custom_css');
 
 
+/**
+ * Custom Secondary Sidebar
+ */
+function itsAGirl_tertiary_sidebar() {
+    $options = get_option('itsAGirl_theme_options');
+
+    if('off' == $options['tertiary_sidebar']) {
+		?>
+		<style type='text/css'>
+		@media screen and (min-width:1061px) {
+			#tertiary {
+				display: none;
+			}
+			.page-template-page-threecolumn-php #primary,
+			.home #primary,
+			#primary {
+				width: 75%;
+			}
+			.page-template-page-threecolumn-php #secondary,
+			.home #secondary,
+			#secondary {
+				margin-left: 77%;
+			}
+		}
+		</style>
+		<?php
+	}
+}
+add_action('wp_head', 'itsAGirl_tertiary_sidebar');
+
+
 
 /**
  * Custom page title

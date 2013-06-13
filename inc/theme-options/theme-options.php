@@ -44,6 +44,8 @@ function itsAGirl_theme_options_init() {
 
 	add_settings_field( 'custom_css', __( 'Custom CSS', 'itsAGirl' ), 'itsAGirl_settings_field_custom_css', 'theme_options', 'general' );
 
+	add_settings_field( 'tertiary_sidebar', __( 'Secondary Sidebar', 'itsAGirl' ), 'itsAGirl_settings_field_tertiary_sidebar', 'theme_options', 'general' );
+
 	add_settings_field(
 		'support', // Unique identifier for the field for this section
 		__( 'Support itsAGirl', 'itsAGirl' ), // Setting field label
@@ -99,6 +101,7 @@ add_action( 'admin_menu', 'itsAGirl_theme_options_add_page' );
 function itsAGirl_get_default_theme_options() {
 	$default_theme_options = array(
 		'custom_css' => '',
+		'tertiary_sidebar' => '',
 		'support' => 0
 	);
 
@@ -146,6 +149,19 @@ function itsAGirl_settings_field_custom_css() {
 	?>
 	<textarea class="large-text" type="text" name="itsAGirl_theme_options[custom_css]" id="custom_css" cols="50" rows="10" /><?php echo esc_textarea( $options['custom_css'] ); ?></textarea>
 	<label class="description" for="custom_css"><?php _e( 'Add any custom CSS rules here so they will persist through theme updates.', 'itsAGirll' ); ?></label>
+	<?php
+}
+
+/**
+ * Renders the tertiary sidebar setting field.
+ */
+function itsAGirl_settings_field_tertiary_sidebar() {
+	$options = itsAGirl_get_theme_options();
+	?>
+	<input type="radio" name="itsAGirl_theme_options[tertiary_sidebar]" value="on" id="tertiary_sidebar_on" <?php checked( 'on', $options['tertiary_sidebar'] ); ?> />
+	<label class="description" for="tertiary_sidebar_on"><?php _e( 'Shown', 'itsAGirll' ); ?></label> 
+	<input type="radio" name="itsAGirl_theme_options[tertiary_sidebar]" value="off" id="tertiary_sidebar_off" <?php checked( 'off', $options['tertiary_sidebar'] ); ?> />
+	<label class="description" for="tertiary_sidebar_off"><?php _e( 'Hidden', 'itsAGirll' ); ?></label>
 	<?php
 }
 
@@ -271,6 +287,11 @@ function itsAGirl_theme_options_validate( $input ) {
 	// The Custom CSS must be safe text with the allowed tags for posts
 	if ( isset( $input['custom_css'] ) )
 		$output['custom_css'] = wp_filter_nohtml_kses($input['custom_css'] );
+
+	// The tertiary sidebar field should either be on or off
+	if ( ! isset( $input['tertiary_sidebar'] ) )
+		$input['tertiary_sidebar'] = 'on';
+	$output['tertiary_sidebar'] = ( $input['tertiary_sidebar'] == 'off' ? 'off' : 'on' );
 
 	return apply_filters( 'itsAGirl_theme_options_validate', $output, $input, $defaults );
 }

@@ -4,6 +4,7 @@ Version History:
 
 version 1.0.0 - Hello World
 version 1.0.7 - Makes the theme translation ready
+version 1.0.8 - Added theme option to hide the secondary sidebar
 
 --------------------------------------------------------------------------------
 For support:
@@ -19,7 +20,7 @@ Long wordpress site title not supported. The layout will only look good with one
 Long wordpress site description not supported. The layout will only look good with one line of text.
 
 Primary sidebar is shown on all layouts.
-Secondary sidebar (the middle bar) is only shown on the index layout.
+Secondary sidebar (the middle bar) is only shown on the index layout when the screen is wide. You may hide this sidebar under the theme options.
 
 --------------------------------------------------------------------------------
  Licenses:
