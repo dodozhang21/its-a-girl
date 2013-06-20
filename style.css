@@ -4,7 +4,7 @@ Theme URI: http://pure-essence.net/2013/04/09/its-a-girl-wordpress-theme/
 Author: Ying Zhang
 Author URI: http://regretless.com
 Description: Created by <a href="http://pure-essence.net/">pure-essence.net</a>. It's a Girl is a responsive theme designed for baby girl blogs. It features a front page center widget area under high resolution that's ideal for a gallery widget. It supports Jetpack infinite scroll.
-Version: 1.0.8
+Version: 1.0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, blue, brown, gray, green, red, tan, white, yellow, light, three-columns, right-sidebar, fixed-width, blavatar, custom-background, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, sticky-post, theme-options, threaded-comments, translation-ready
@@ -625,6 +625,7 @@ a:visited {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
     writing-mode: lr-tb;
 	font-family: Arial, sans-serif;
 	font-size: 200%;
