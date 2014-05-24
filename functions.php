@@ -197,7 +197,8 @@ function itsAGirl_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_style( 'googleFonts', '//fonts.googleapis.com/css?family=Sofia|Adamina|Sacramento' );
+	// Disable Google Web Fonts to avoid external links
+	//wp_enqueue_style( 'googleFonts', '//fonts.googleapis.com/css?family=Sofia|Adamina|Sacramento' );
 
 }
 add_action( 'wp_enqueue_scripts', 'itsAGirl_scripts' );
