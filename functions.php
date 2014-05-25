@@ -197,7 +197,8 @@ function itsAGirl_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_style( 'googleFonts', '//fonts.googleapis.com/css?family=Sofia|Adamina|Sacramento' );
+	// Disable Google Web Fonts to avoid external links
+	//wp_enqueue_style( 'googleFonts', '//fonts.googleapis.com/css?family=Sofia|Adamina|Sacramento' );
 
 }
 add_action( 'wp_enqueue_scripts', 'itsAGirl_scripts' );
@@ -302,7 +303,7 @@ add_filter( 'wp_title', 'itsAGirl_filter_wp_title', 10, 2 );
  */
 function itsAGirl_post_image_html( $html, $post_id, $post_image_id ) {
 
-	$html = '<div class="itsAGirl-post-thumbnail" style="background: url(' . wp_get_attachment_url( get_post_thumbnail_id($post_id) ) . ') no-repeat center center;background-size: 200px"><div class="itsAGirl-post-thumbnail-inner">' . $html . '</div></div>';
+	$html = '<div class="itsAGirl-post-thumbnail" style="background: url(' . wp_get_attachment_image_src( get_post_thumbnail_id($post_id) )['0'] . ') no-repeat center center;background-size: 150px"><div class="itsAGirl-post-thumbnail-inner">' . $html . '</div></div>';
 
 	return $html;
 }
